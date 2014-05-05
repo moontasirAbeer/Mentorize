@@ -67,9 +67,14 @@
 			text.load(function() {
 				text.fadeIn('slow').delay(settings.textShowTime).fadeOut('slow', function () {
 					text.remove();
+					splashScreen.trigger('changeText', [id+1]);
 
-				})
-			})
+				});
+			});
+
+			splashScreen.append(text);
 		}
+
+		return this;
 	}
-})
+})(jQuery);
