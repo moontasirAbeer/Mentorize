@@ -62,6 +62,13 @@
 				css: {
 					marginTop : promoIMG.offset().top+settings.textTopOffset
 				}
+			}).hide();
+
+			text.load(function() {
+				text.fadeIn('slow').delay(settings.textShowTime).fadeOut('slow', function () {
+					text.remove();
+
+				})
 			})
 		}
 	}
