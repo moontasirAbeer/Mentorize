@@ -68,13 +68,16 @@ body{
 
 /* Hyperlink styles */
 
-a, a:visited {
-	text-decoration:underline;
-	outline:none;
-	color:#4086c7;
-}
 
 a:hover{
 	border-bottom:1px dashed transparent;
 	text-decoration:none;
+}
+
+.hidden {
+	visibility: hidden 	!important;
+}
+
+.show {
+	visibility: block !important;
 }

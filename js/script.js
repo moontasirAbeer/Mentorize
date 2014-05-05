@@ -6,9 +6,9 @@ $(document).ready(function() {
 	$('#promoIMG').splashScreen({
 
 		textLayers : [
-			'img/640x480mentorize.jpg',
-			'img/640x480mentorize.jpg',
-			'img/640x480mentorize.jpg'
+			'img/640x480mentorize_png.png',
+			'img/640x480mentorize_png.png',
+			'img/640x480mentorize_png.png'
 		]
 	});
 });

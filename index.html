@@ -7,9 +7,12 @@
 		<title>Mentorize</title>
 		<meta name="description" content="Loads into view app then prompts user" />
 		<link rel="stylesheet" type="text/css" href="css/styles.css" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css" />
 		<link rel="stylesheet" type="text/css" href="css/splashscreen.css" />
 		<script src="http://ajax.microsoft.com/ajax/jQuery/jquery-1.4.4.min.js"></script>
 		<script src="js/jquery-2.1.1.js"></script>
+		<script src="js/bootstrap.js"></script>
 		<script src="js/jquery.splashscreen.js"></script>
 		<script src="js/script.js"></script>
 		<!--[if IE]>
@@ -18,22 +21,67 @@
 	</head>
 
 	<body>
-		<div id="page">
-			<div id="topBar"></div>
-			
-			<div id="promoIMG">
-				<div id="chooseOption" class="btn-toolbar" role="toolbar">
-					<div id="loginRegister" class="btn-group">
-						<button type="button" id="loginButton">Log In!</button>				
-						<button type="button" id="registerButton">Register!</button>
+		<div id="page" class="site-wrapper">
+			<div class="site-wrapper-inner">
+
+				<div id="topBar" class="masthead clearfix"></div>
+				
+				<div id="promoIMG" class="inner-cover">
+					<div id="buttons" class=cover-heading>
+						<a class="btn btn-lg btn-primary" onclick="login()">Login</a>
+						<a class="btn btn-lg btn-primary" onclick="register()">Register</a>
 					</div>
 				</div>
-			</div>
 
-			<div id="contentArea">
-				<p>....Content....</p>
+				<div id="contentArea">
+					<div id="login" class="hidden">
+						<form role="form">
+							<div class="form-group">
+								<label class="sr-only" for="inputEmail">Email Address</label>
+								<input type="email" class="form-control" id="inputEmail" placeholder="Enter Email">
+							</div>
+							<div class="form-group">
+								<label class="sr-only" for="inputPassword">Password</label>
+								<input type="password" class="form-control" id="inputPassword" placeholder="Password">
+							</div>
+							<button type="submit" class="btn btn-info">Sign In</button>
+						</form>
+					</div>
+					<div id="register" class="hidden">
+						<form role="form">
+							<div class="form-group">
+								<label class="sr-only" for="inputEmail">Email Address</label>
+								<input type="email" class="form-control" id="inputEmail" placeholder="Enter Email">
+							</div>
+							<div class="form-group">
+								<label class="sr-only" for="inputPassword">Password</label>
+								<input type="password" class="form-control" id="inputPassword" placeholder="Password">
+							</div>
+							<button type="submit" class="btn btn-info">Register</button>
+						</form>
+					</div>
+
+				</div>
 			</div>
 		</div>
 
 	</body>
+	<script type="text/javascript">	
+		function login(){
+			if(document.getElementById("register").className="show") {
+				document.getElementById("register").className="hidden";
+			}
+
+			document.getElementById("login").className="show";				
+		}
+
+		function register(){
+			if(document.getElementById("login").className="show") {
+				document.getElementById("login").className="hidden";
+			}
+
+			document.getElementById("register").className="show";
+
+		}
+	</script>
 </html>
