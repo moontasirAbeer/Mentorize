@@ -15,6 +15,8 @@
 		<script src="js/bootstrap.js"></script>
 		<script src="js/jquery.splashscreen.js"></script>
 		<script src="js/script.js"></script>
+		<script src="js/logReg.js"></script>
+		<script src="js/registerOK.js"></script>
 		<!--[if IE]>
   		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
@@ -50,14 +52,26 @@
 					<div id="register" class="hidden">
 						<form role="form">
 							<div class="form-group">
+								<label class="sr-only" for="chooseUsername">Choose a Username</label>
+								<input type="text" class="form-control" id="chooseUsername" placeholder="Choose a Username">
+							</div>
+							<div class="form-group">
 								<label class="sr-only" for="inputEmail">Email Address</label>
 								<input type="email" class="form-control" id="inputEmail" placeholder="Enter Email">
+							</div>
+							<div class="form-group">
+								<label class="sr-only" for="confirmEmail">Confirm Email Address</label>
+								<input type="email" class="form-control" id="confirmEmail" placeholder="Confirm Email Address">
 							</div>
 							<div class="form-group">
 								<label class="sr-only" for="inputPassword">Password</label>
 								<input type="password" class="form-control" id="inputPassword" placeholder="Password">
 							</div>
-							<button type="submit" class="btn btn-info">Register</button>
+							<div class="form-group">
+								<label class="sr-only" for="conFirmPassword">Confirm Password</label>
+								<input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password">
+							</div>
+							<button type="submit" class="btn btn-info" id="registerBtn">Register</button>
 						</form>
 					</div>
 
@@ -66,22 +80,6 @@
 		</div>
 
 	</body>
-	<script type="text/javascript">	
-		function login(){
-			if(document.getElementById("register").className="show") {
-				document.getElementById("register").className="hidden";
-			}
 
-			document.getElementById("login").className="show";				
-		}
-
-		function register(){
-			if(document.getElementById("login").className="show") {
-				document.getElementById("login").className="hidden";
-			}
-
-			document.getElementById("register").className="show";
-
-		}
-	</script>
+		
 </html>
