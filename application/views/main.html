@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<title>Mentorize</title>
+		<meta name="description" content="Loads into view app then prompts user" />
+		<link rel="stylesheet" type="text/css" href="css/styles.css" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css" />
+		<link rel="stylesheet" type="text/css" href="css/splashscreen.css" />
+		<script src="http://ajax.microsoft.com/ajax/jQuery/jquery-1.4.4.min.js"></script>
+		<script src="js/jquery-2.1.1.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<script src="js/jquery.splashscreen.js"></script>
+		<script src="js/script.js"></script>
+		<script src="js/logReg.js"></script>
+		<script src="js/registerOK.js"></script>
+		<!--[if IE]>
+  		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div id="page" class="site-wrapper">
+			<div class="site-wrapper-inner">
+
+				<div id="topBar" class="masthead clearfix"></div>
+				
+				<div id="promoIMG" class="inner-cover">
+					<div id="buttons" class=cover-heading>
+						<ul class="nav nav-tabs nav-justified">
+							<li><a onclick="login()">Login</a></li>
+							<li><a onclick="register()">Register</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div id="contentArea">
+					<div id="login" class="hidden">
+						<form role="form">
+							<div class="form-group">
+								<label class="sr-only" for="logInputEmail">Email Address</label>
+								<input type="email" class="form-control" id="logInputEmail" placeholder="Enter Email">
+							</div>
+							<div class="form-group">
+								<label class="sr-only" for="logInputPassword">Password</label>
+								<input type="password" class="form-control" id="logInputPassword" placeholder="Password">
+							</div>
+							<button type="submit" class="btn btn-success">Sign In</button>
+						</form>
+					</div>
+					<div id="register" class="hidden">
+						<form role="form">
+							<div class="form-group">
+								<label class="sr-only" for="chooseUsername">Choose a Username</label>
+								<input type="text" class="form-control" id="chooseUsername" placeholder="Choose a Username">
+							</div>
+							<div class="form-group">
+								<label class="sr-only" for="inputEmail">Email Address</label>
+								<input type="email" class="form-control" id="inputEmail" placeholder="Enter Email">
+							</div>
+							<div class="form-group">
+								<label class="sr-only" for="confirmEmail">Confirm Email Address</label>
+								<input type="email" class="form-control" id="confirmEmail" placeholder="Confirm Email Address">
+							</div>
+							<div class="form-group">
+								<label class="sr-only" for="inputPassword">Password</label>
+								<input type="password" class="form-control" id="inputPassword" placeholder="Password">
+							</div>
+							<div class="form-group">
+								<label class="sr-only" for="conFirmPassword">Confirm Password</label>
+								<input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password">
+							</div>
+							<button type="submit" class="btn btn-success" id="registerBtn">Register</button>
+						</form>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+		
+</html>

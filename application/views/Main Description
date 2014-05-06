@@ -1,0 +1,37 @@
+PLATFORM:  
+
+What is it?
+	A peer to peer network application that enables the “user” to ask questions to industry professionals.
+
+	User: Defined to be individual/group with question/inquiry.
+	Industry Professionals: Defined to be any specialist or experienced mentor from industry.
+
+Alternatives: 
+Mentoring.org: Website providing services related to finding and getting professional mentors
+Difference with us: Our app is ask a question to specialist, not finding professional peers
+
+http://www.mentors.ca/askamentor.html: Website allowing you to ask a question, via web form, and receive a response 
+  from a peer mentor. Also has links to individual mentoring sites and telephone references for emergency or 
+  confidential items.
+Question: Is the website efficient/widely used? Can we do better?
+Answer: It asks a connector the question, whereby the connector selects a ‘mentor / expert’ to respond.   
+  The process thereby follows, that the above site does not ask an expert directly, but upon the connectors discretion. 
+  Therefore, such a site can be vastly improved upon. Various email domains are also banned from the service, 
+  creating a selectiveness that may not help the end user or force them to find another site.
+		
+
+Registration:
+	Choices:
+		1. Mentor
+        Name
+        Industry *Selection
+        Specialization *Keywords
+        Experiences
+        Advise **Keywords
+        Expertise
+        
+		2. Mentee
+        Name
+        Industry
+        Specialization
+        Experiences
