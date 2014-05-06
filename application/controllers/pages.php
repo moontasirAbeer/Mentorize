@@ -22,8 +22,11 @@ class Pages extends CI_Controller {
 		$this->load->view('main.html');
 	}
 
-	public function page($page = 'apage'){
-		$this->load->view("$page");
+	public function page(){
+		$this->load->model('user_model');
+
+		$data['users'] = $this->user_model->get_users();
+		$this->load->view('testdata', $data);
 	}
 }
 
