@@ -4,8 +4,9 @@
 }
 
 body{
-	color:#777;
-	background:url('../img/page_bg.jpg') #e7e7e7;
+	color:#777 !important;
+	background-color: orange !important;
+	background-repeat: no-repeat;
 	font:15px Calibri,Arial,sans-serif;
 }
 
@@ -22,9 +23,7 @@ body{
 }
 
 #promoIMG{
-	
-	height:632px;
-	margin-bottom:15px;
+	margin-bottom:10%;
 	text-align:center;
 }
 
@@ -35,6 +34,8 @@ body{
 #contentArea{
 	overflow:hidden;
 	padding-bottom:10px;
+	padding-left:25%;
+	padding-right:25%;
 }
 
 #contentArea p{
@@ -68,16 +69,16 @@ body{
 
 /* Hyperlink styles */
 
-
-a:hover{
-	border-bottom:1px dashed transparent;
-	text-decoration:none;
-}
-
 .hidden {
 	visibility: hidden 	!important;
 }
 
 .show {
 	visibility: block !important;
+}
+
+.nav-tabs.nav-justified > li > a {
+	border-bottom: 0px solid #388BCC	!important;
+	border-radius: 120px 60px 150px 0	!important;
+	font-size: 25px	!important;
 }

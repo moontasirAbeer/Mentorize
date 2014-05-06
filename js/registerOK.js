@@ -15,7 +15,7 @@ $(document).ready(function(){
         // Username check
         var userName = $("#chooseUsername").val();
         if (userName == '') {
-            $("#chooseUsername").after('<span class="error">Please enter a username.</span>');
+            $("#chooseUsername").after('<span class="error"><h4>Please enter a username.<h4></span>');
             hasError = true;
         }
 
@@ -23,15 +23,15 @@ $(document).ready(function(){
         var emailAddy = $("#inputEmail").val();
         var confirmEmail = $("#confirmEmail").val();
         if(emailAddy == '') {
-            $("#inputEmail").after('<span class="error">Please enter your email address.</span>');
+            $("#inputEmail").after('<span class="error"><h4>Please enter your email address.<h4></span>');
             hasError = true;
         }
         else if(confirmEmail == '') {
-            $("#confirmEmail").after('<span class="error">Please enter your email address.</span>');
+            $("#confirmEmail").after('<span class="error"><h4>Please enter your email address.<h4></span>');
             hasError = true;
         }
         else if(emailAddy != confirmEmail){
-            $("#confirmEmail").after('<span class="error">Email addresses do not match.</span>');
+            $("#confirmEmail").after('<span class="error"><h4>Email addresses do not match.<h4></span>');
             hasError = true;
         }
         
@@ -39,13 +39,13 @@ $(document).ready(function(){
         var passwordVal = $("#inputPassword").val();
         var checkVal = $("#conFirmPassword").val();
         if (passwordVal == '') {
-            $("#inputPassword").after('<span class="error">Please enter a password.</span>');
+            $("#inputPassword").after('<span class="error"><h4>Please enter a password.<h4></span>');
             hasError = true;
         } else if (checkVal == '') {
-            $("#conFirmPassword").after('<span class="error">Please re-enter your password.</span>');
+            $("#conFirmPassword").after('<span class="error"><h4>Please re-enter your password.<h4></span>');
             hasError = true;
         } else if (passwordVal != checkVal ) {
-            $("#conFirmPassword").after('<span class="error">Passwords do not match.</span>');
+            $("#conFirmPassword").after('<span class="error"><h4>Passwords do not match.<h4></span>');
             hasError = true;
         }
         
