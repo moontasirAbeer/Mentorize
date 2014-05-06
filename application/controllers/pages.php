@@ -25,6 +25,8 @@ class Pages extends CI_Controller {
 	public function page(){
 		$this->load->model('user_model');
 
+		$data['testvar'] = "Aye Carumba! :O";
+
 		$data['users'] = $this->user_model->get_users();
 		$this->load->view('testdata', $data);
 	}

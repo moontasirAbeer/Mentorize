@@ -6,5 +6,11 @@
 </head>
 <body>
 	<?php echo "Hello, World!!"; ?>
+	<br>
+
+	<?php print_r($users); ?>
+	<br>
+
+	<?php echo($testvar); ?>
 </body>
 </html>
