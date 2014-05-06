@@ -10,6 +10,10 @@ body{
 	font:15px Calibri,Arial,sans-serif;
 }
 
+a {
+	color: #2F572C	!important;
+}
+
 /* Styling the page */
 
 #page{
