@@ -92,7 +92,7 @@
 								<label class="sr-only" for="conFirmPassword">Confirm Password</label>
 								<input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password">
 							</div>
-							<button type="submit" class="btn btn-success" id="registerBtn">Register</button>
+							<input type="button" name="submit" class="btn btn-succsss" value="Register"/>
 						</form>
 					</div>
 
