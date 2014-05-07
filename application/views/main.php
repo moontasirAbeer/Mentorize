@@ -72,6 +72,19 @@
 						<?php echo validation_errors(); ?>
 						<form role="form" action="http://localhost/Mentorize/index.php/pages/create" method="post" accept-charset="utf-8">
 						<!-- CI Form end -->
+							
+							<!-- New Dropdown-->
+							<div class="btn-group">
+								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+									Are You a Mentor or Mentee? <span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu" role="menu">
+									<li><a href="#">Mentor</a></li>
+									<li><a href="#">Mentee</a></li>
+								</ul>
+							</div>
+							<!-- End New Dropdown-->
+							
 							<div class="form-group">
 								<label class="sr-only" for="chooseUsername">Choose a Username</label>
 								<input type="text" class="form-control" name="chooseUsername" id="chooseUsername" placeholder="Choose a Username">

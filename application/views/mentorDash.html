@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
         <link href="css/dashboard.css" rel="stylesheet">
-		<script src="js/mentorDash.js"></script>
+		<script src="../../js/mentorDash.js"></script>
         
         <!--[if lt IE 9]>
           <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -55,7 +55,7 @@
 	          <h5>Settings <i class="glyphicon glyphicon-chevron-down"></i></h5>
 	          </a>
 	            <ul class="list-unstyled collapse in" id="userMenu">
-	                <li class="active"> <a href="#"><i class="glyphicon glyphicon-home"></i> Home</a></li>
+	                <li> <a href="#"><i class="glyphicon glyphicon-home"></i> Home</a></li>
 	                <li><a href="#"><i class="glyphicon glyphicon-envelope"></i> Messages <span class="badge badge-info">4</span></a></li>
 	                <li><a href="#"><i class="glyphicon glyphicon-cog"></i> Options</a></li>
 	                <li><a href="#"><i class="glyphicon glyphicon-comment"></i> Shoutbox</a></li>
@@ -139,13 +139,21 @@
 								<input type="email" class="form-control" id="showEmail" placeholder="Enter Email">
 							</div>
 							
-							<!-- ??? -->
-							<div class="dropdown">
-								<a data-toggle="dropdown" href="#">Industry</a>
-								<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-									Industries here...
+							<!-- New Dropdown-->
+							<div class="btn-group">
+								<label for="industry">Industry Selection</label>
+								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+									Choose Your Industry<span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu" role="menu">
+									<li><a href="#">Computing Science</a></li>
+									<li><a href="#">Construction</a></li>
+									<li><a href="#">Management</a></li>
+									<li><a href="#">Education</a></li>
+									<li><a href="#">Vehicular Repair</a></li>
 								</ul>
 							</div>
+							<!-- End New Dropdown-->
 
 							<div class="form-group">
 								<label for="specTag">Areas of Specialization</label>

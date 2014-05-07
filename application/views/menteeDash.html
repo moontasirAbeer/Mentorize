@@ -117,7 +117,7 @@
 				<div class="container">
 					<div class="col-md-4">
 						<ul class="nav nav-tabs" id="myTab">
-							<li class="active"><a href="#profile" data-toggle="tab" onclick="showProfile()">Profile</a></li>
+							<li><a href="#profile" data-toggle="tab" onclick="showProfile()">Profile</a></li>
 							<li><a href="#messages" data-toggle="tab" onclick="showMessages()">Messages</a></li>
 							<li><a href="#settings" data-toggle="tab" onclick="showSettings()">Settings</a></li>
 						</ul>
@@ -139,13 +139,21 @@
 								<input type="email" class="form-control" id="showEmail" placeholder="Enter Email">
 							</div>
 							
-							<!-- ??? -->
-							<div class="dropdown">
-								<a data-toggle="dropdown" href="#">Industry</a>
-								<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-									Industries here...
+							<!-- New Dropdown-->
+							<div class="btn-group">
+								<label for="industry">Industry Selection</label>
+								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+									Choose Your Industry<span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu" role="menu">
+									<li><a href="#">Computing Science</a></li>
+									<li><a href="#">Construction</a></li>
+									<li><a href="#">Management</a></li>
+									<li><a href="#">Education</a></li>
+									<li><a href="#">Vehicular Repair</a></li>
 								</ul>
 							</div>
+							<!-- End New Dropdown-->
 
 							<div class="form-group">
 								<label for="specTag">Areas of Specialization</label>
