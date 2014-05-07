@@ -19,7 +19,7 @@ class Test extends CI_Controller {
 	 */
 
 	public function index(){
-		$this->load->view('main.html');
+		$this->load->view('apage');
 	}
 
 	public function page($page = 'apage'){
