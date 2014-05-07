@@ -29,7 +29,7 @@
 				<div id="topBar" class="masthead clearfix"></div>
 				
 				<div id="promoIMG" class="inner-cover">
-					<div id="buttons" class=cover-heading>
+					<div id="buttons" class="cover-heading">
 						<ul class="nav nav-tabs nav-justified">
 							<li>
 								<fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
@@ -67,7 +67,11 @@
 						</form>
 					</div>
 					<div id="register" class="hidden">
-						<form role="form">
+						<!-- <form role="form"> -->
+						<!-- CI Form start -->
+						<?php echo validation_errors(); ?>
+						<form role="form" action="http://localhost/Mentorize/index.php/pages/create" method="post" accept-charset="utf-8">
+						<!-- CI Form end -->
 							<div class="form-group">
 								<label class="sr-only" for="chooseUsername">Choose a Username</label>
 								<input type="text" class="form-control" id="chooseUsername" placeholder="Choose a Username">
