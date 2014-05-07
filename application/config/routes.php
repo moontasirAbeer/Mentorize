@@ -41,7 +41,7 @@
 # $route['(:any)'] = "pages/page/$1"
 $route['default_controller'] = "pages/page";
 $route['404_override'] = '';
-$routes['test'] = "pages";
+$routes['test'] = "test";
 
 
 /* End of file routes.php */
