@@ -57,11 +57,11 @@
 						<form role="form">
 							<div class="form-group">
 								<label class="sr-only" for="logInputEmail">Email Address</label>
-								<input type="email" class="form-control" id="logInputEmail" placeholder="Enter Email">
+								<input type="email" class="form-control" name="logInputEmail" id="logInputEmail" placeholder="Enter Email">
 							</div>
 							<div class="form-group">
 								<label class="sr-only" for="logInputPassword">Password</label>
-								<input type="password" class="form-control" id="logInputPassword" placeholder="Password">
+								<input type="password" class="form-control" name="logInputEmail" id="logInputPassword" placeholder="Password">
 							</div>
 							<button type="submit" class="btn btn-success">Sign In</button>
 						</form>
@@ -74,25 +74,25 @@
 						<!-- CI Form end -->
 							<div class="form-group">
 								<label class="sr-only" for="chooseUsername">Choose a Username</label>
-								<input type="text" class="form-control" id="chooseUsername" placeholder="Choose a Username">
+								<input type="text" class="form-control" name="chooseUsername" id="chooseUsername" placeholder="Choose a Username">
 							</div>
 							<div class="form-group">
 								<label class="sr-only" for="inputEmail">Email Address</label>
-								<input type="email" class="form-control" id="inputEmail" placeholder="Enter Email">
+								<input type="email" class="form-control" name="inputEmail" id="inputEmail" placeholder="Enter Email">
 							</div>
 							<div class="form-group">
 								<label class="sr-only" for="confirmEmail">Confirm Email Address</label>
-								<input type="email" class="form-control" id="confirmEmail" placeholder="Confirm Email Address">
+								<input type="email" class="form-control" name="confirmEmail" id="confirmEmail" placeholder="Confirm Email Address">
 							</div>
 							<div class="form-group">
 								<label class="sr-only" for="inputPassword">Password</label>
-								<input type="password" class="form-control" id="inputPassword" placeholder="Password">
+								<input type="password" class="form-control" name="inputPassword" id="inputPassword" placeholder="Password">
 							</div>
 							<div class="form-group">
 								<label class="sr-only" for="conFirmPassword">Confirm Password</label>
-								<input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password">
+								<input type="password" class="form-control" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password">
 							</div>
-							<button type="submit" class="btn btn-success" id="registerBtn">Register</button>
+							<input type="submit" name="submit" class="btn btn-succsss" value="Register"/>
 						</form>
 					</div>
 
