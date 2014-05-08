@@ -3,7 +3,10 @@
 class C_dashboard extends CI_Controller {
 
 	public function index(){
+		$this->load->view('templates/main_header');
+		$this->load->view('templates/main_sidebar');
 		$this->load->view('dashboard');
+		$this->load->view('templates/main_footer');
 	}
 
 }

@@ -13,15 +13,15 @@ class C_pages extends CI_Controller {
 		$this->load->view('frontpage');
 	}
 
-	public function query_test(){
-		$data['testvar'] = "Aye Carumba! :O";
-		$data['users'] = $this->user_model->get_users();
-		$this->load->view('testdata', $data);
+	public function login(){
+		# add later
+		# also add 'user_model' method for this
 	}
 
 	public function create(){
 		$data = $this->input->post();
 		print_r($data);
+		# the above is for debugging. Remove.
 
 		$this->user_model->insert_user();
 	}
@@ -35,6 +35,12 @@ class C_pages extends CI_Controller {
 		print_r($data);
 
 		$this->user_model->insert_test();
+	}
+
+	public function query_test(){
+		$data['testvar'] = "Aye Carumba! :O";
+		$data['users'] = $this->user_model->get_users();
+		$this->load->view('testdata', $data);
 	}
 }
 
