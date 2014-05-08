@@ -63,7 +63,7 @@
 								<label class="sr-only" for="logInputPassword">Password</label>
 								<input type="password" class="form-control" name="logInputEmail" id="logInputPassword" placeholder="Password">
 							</div>
-							<button type="submit" class="btn btn-success">Sign In</button>
+							<input type="submit" name="submitLog" class="btn btn-succsss" value="Log In"/>
 						</form>
 					</div>
 					<div id="register" class="hidden">
@@ -103,7 +103,7 @@
 
 							</div>
 							<!-- End New Dropdown-->
-							<input type="submit" name="submit" class="btn btn-succsss" value="Register"/>
+							<input type="submit" name="submitReg" class="btn btn-succsss" value="Register"/>
 						</form>
 					</div>
 				</div>
