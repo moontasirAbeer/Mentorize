@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
         <link href="css/dashboard.css" rel="stylesheet">
-		<script src="js/menteeDash.js"></script>
+		<script src="../../js/mentorDash.js"></script>
         
         <!--[if lt IE 9]>
           <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -55,7 +55,7 @@
 	          <h5>Settings <i class="glyphicon glyphicon-chevron-down"></i></h5>
 	          </a>
 	            <ul class="list-unstyled collapse in" id="userMenu">
-	                <li class="active"> <a href="#"><i class="glyphicon glyphicon-home"></i> Home</a></li>
+	                <li> <a href="#"><i class="glyphicon glyphicon-home"></i> Home</a></li>
 	                <li><a href="#"><i class="glyphicon glyphicon-envelope"></i> Messages <span class="badge badge-info">4</span></a></li>
 	                <li><a href="#"><i class="glyphicon glyphicon-cog"></i> Options</a></li>
 	                <li><a href="#"><i class="glyphicon glyphicon-comment"></i> Shoutbox</a></li>
@@ -117,7 +117,7 @@
 				<div class="container">
 					<div class="col-md-4">
 						<ul class="nav nav-tabs" id="myTab">
-							<li><a href="#profile" data-toggle="tab" onclick="showProfile()">Profile</a></li>
+							<li class="active"><a href="#profile" data-toggle="tab" onclick="showProfile()">Profile</a></li>
 							<li><a href="#messages" data-toggle="tab" onclick="showMessages()">Messages</a></li>
 							<li><a href="#settings" data-toggle="tab" onclick="showSettings()">Settings</a></li>
 						</ul>
@@ -164,6 +164,11 @@
 								<label for="experience">Past Experience</label>
 								<textarea class="form-control" rows="5" id="experience" placeholder="Write a brief excerpt of your past experience.">
 								</textarea>
+							</div>
+							
+							<div class="form-group">
+								<label for="adviseTag">Areas You Are Willing To Advise In</label>
+								<input type="text" data-role="tagsinput" class="form-control" id="adviseTag" placeholder="Enter the fields you are willing to advise in here. These are interpreted as tags.">
 							</div>
 							
 							<div class="form-group">

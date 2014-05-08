@@ -67,9 +67,11 @@
 						</form>
 					</div>
 					<div id="register" class="hidden">
-						
-						<!-- CI Form open -->
-						<?php echo form_open('pages/create') ?>
+						<!-- <form role="form"> -->
+						<!-- CI Form start -->
+						<?php echo validation_errors(); ?>
+						<form role="form" action="http://localhost/Mentorize/index.php/pages/create" method="post" accept-charset="utf-8">
+						<!-- CI Form end -->
 							<div class="form-group">
 								<label class="sr-only" for="chooseUsername">Choose a Username</label>
 								<input type="text" class="form-control" name="chooseUsername" id="chooseUsername" placeholder="Choose a Username">
