@@ -54,7 +54,7 @@
 
 				<div id="contentArea">
 					<div id="login" class="hidden">
-						<form role="form">
+						<form role="form" action="http://localhost/Mentorize/index.php/pages/login" method="post" accept-charset="utf-8">
 							<div class="form-group">
 								<label class="sr-only" for="logInputEmail">Email Address</label>
 								<input type="email" class="form-control" name="logInputEmail" id="logInputEmail" placeholder="Enter Email">

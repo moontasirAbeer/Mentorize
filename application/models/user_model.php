@@ -18,9 +18,28 @@ class User_model extends CI_Model{
 		'password' => $this->input->post('inputPassword'),
 		'email' => $this->input->post('inputEmail'),
 		'user_type' => 'TEST'
-					);
+		);
+
+		# ID checking should be done in view js
+		# pass all usernames to view on page load
 
 	return $this->db->insert('users', $data);
+	}
+
+	public function login(){
+		$data = array(
+		'user_name' => $this->input->post('chooseUsername'),
+		'password' => $this->input->post('inputPassword'),
+		);
+
+		$query = $this->db->query('select user_name, password from users;');
+		$existing_users = $query->result_array();
+
+		foreach($existing_users as $users){
+			if($data['user_name'] == $users['user_name'] && $data['password'] == $users['password']){
+				
+			}
+		}
 	}
 
 	public function insert_test(){
