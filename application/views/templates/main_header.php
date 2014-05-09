@@ -6,7 +6,7 @@
         <meta name="generator" content="Dashboard" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/dashboard.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/dashboard.css" />
 		<script src="js/menteeDash.js"></script>
         
         <!--[if lt IE 9]>
