@@ -63,13 +63,15 @@
 								<label class="sr-only" for="logInputPassword">Password</label>
 								<input type="password" class="form-control" name="logInputEmail" id="logInputPassword" placeholder="Password">
 							</div>
-							<button type="submit" class="btn btn-success">Sign In</button>
+							<input type="submit" name="submitLog" class="btn btn-succsss" value="Log In"/>
 						</form>
 					</div>
 					<div id="register" class="hidden">
-						
-						<!-- CI Form open -->
-						<?php echo form_open('pages/create') ?>
+						<!-- <form role="form"> -->
+						<!-- CI Form start -->
+						<?php echo validation_errors(); ?>
+						<form role="form" action="http://localhost/Mentorize/index.php/pages/create" method="post" accept-charset="utf-8">
+						<!-- CI Form end -->
 							<div class="form-group">
 								<label class="sr-only" for="chooseUsername">Choose a Username</label>
 								<input type="text" class="form-control" name="chooseUsername" id="chooseUsername" placeholder="Choose a Username">
@@ -101,7 +103,7 @@
 
 							</div>
 							<!-- End New Dropdown-->
-							<input type="submit" name="submit" class="btn btn-succsss" value="Register"/>
+							<input type="submit" name="submitReg" class="btn btn-succsss" value="Register"/>
 						</form>
 					</div>
 				</div>
