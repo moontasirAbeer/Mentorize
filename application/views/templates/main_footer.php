@@ -1,4 +1,4 @@
-<footer class="text-center"></footer>
+<footer class=""></footer>
 
 	<div class="modal" id="addWidgetModal">
 	  <div class="modal-dialog">
