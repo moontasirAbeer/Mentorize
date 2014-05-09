@@ -37,3 +37,5 @@
 	      <hr>
 	      
 	      <a href="#"><strong><i class="glyphicon glyphicon-link"></i> Resources</strong></a>  
+
+	  	</div><!-- /col-3 -->
