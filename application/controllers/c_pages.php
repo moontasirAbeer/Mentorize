@@ -20,15 +20,11 @@ class C_pages extends CI_Controller {
 		print_r($data);
 		# the above is for debugging. Remove.
 
-		$this->user_model->login();
-		
-	}
+		# check login credentials
+		$user_data = $this->user_model->login();
+		print_r($user_data);
 
-	public function create(){
-		$data = $this->input->post();
-		print_r($data);
-		# the above is for debugging. Remove.
-
+		# set user data in session
 		$newdata['username'] = $this->input->post('user-name');
         $newdata['logged_in'] = TRUE;
         
@@ -45,6 +41,14 @@ class C_pages extends CI_Controller {
         }
 
 		$this->session->set_userdata($newdata);
+
+	}
+
+	public function create(){
+		$data = $this->input->post();
+		print_r($data);
+		# the above is for debugging. Remove.
+
 		$this->user_model->insert_user();
 
 		#DEBUG

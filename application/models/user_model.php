@@ -37,16 +37,24 @@ class User_model extends CI_Model{
 
 	public function login(){
 		$data = array(
-		'user_name' => $this->input->post('chooseUsername'),
-		'password' => $this->input->post('inputPassword'),
+		'user_name' => $this->input->post('user-name'),
+		'password' => $this->input->post('password'),
 		);
 
 		$query = $this->db->query('select user_name, password from users;');
 		$existing_users = $query->result_array();
 
+		# debug --------
+		print_r($existing_users);
+
 		foreach($existing_users as $users){
 			if($data['user_name'] == $users['user_name'] && $data['password'] == $users['password']){
-				
+				$query_string = "select * from users where user_name = /'" . $users['user_name'] . "/';";
+				$user_info = $this->db->query($query_string);
+				return $user_info->result_array(); 
+			}
+			else{
+				return "false";
 			}
 		}
 	}

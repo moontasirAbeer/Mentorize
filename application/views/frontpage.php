@@ -56,12 +56,12 @@
 					<div id="login" class="hidden">
 						<form role="form" action="http://localhost/Mentorize/index.php/c_pages/login" method="post" accept-charset="utf-8">
 							<div class="form-group">
-								<label class="sr-only" for="logInputEmail">Email Address</label>
-								<input type="email" class="form-control" name="logInputEmail" id="logInputEmail" placeholder="Enter Email">
+								<label class="sr-only" for="user-name">User Name</label>
+								<input type="email" class="form-control" name="user-name" id="user-name" placeholder="Enter User Name">
 							</div>
 							<div class="form-group">
-								<label class="sr-only" for="logInputPassword">Password</label>
-								<input type="password" class="form-control" name="logInputEmail" id="logInputPassword" placeholder="Password">
+								<label class="sr-only" for="password">Password</label>
+								<input type="password" class="form-control" name="password" id="password" placeholder="Password">
 							</div>
 							<input type="submit" name="submitLog" class="btn btn-succsss" value="Log In"/>
 						</form>
