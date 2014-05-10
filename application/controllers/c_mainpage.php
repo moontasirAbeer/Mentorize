@@ -21,8 +21,9 @@ class C_mainpage extends CI_Controller {
 		$this->load->view('templates/main_footer');
 	}
 
-	public function view_profile(){
+	public function view_profile($name = "REPLACEME"){
 		$data['profile'] =  $this->profile_model->get_profile();
+		$data['$name'] = $name;
 
 		$this->load->view('templates/main_header', $data);
 		$this->load->view('templates/main_sidebar');
