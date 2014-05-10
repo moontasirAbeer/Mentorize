@@ -1,0 +1,81 @@
+
+
+
+	    <div class="col-md-10">
+	      	
+	      <!-- column 2 -->	
+	      <ul class="list-inline pull-right">
+	         <li><a href="#"><i class="glyphicon glyphicon-cog"></i></a></li>
+	         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-comment"></i><span class="count">3</span></a><ul class="dropdown-menu" role="menu"><li><a href="#">1. Is there a way..</a></li><li><a href="#">2. Hello, admin. I would..</a></li><li><a href="#"><strong>All messages</strong></a></li></ul></li>
+	         <li><a href="#"><i class="glyphicon glyphicon-user"></i></a></li>
+	         <li><a title="Add Widget" data-toggle="modal" href="#addWidgetModal"><span class="glyphicon glyphicon-plus-sign"></span> Add Widget</a></li>
+	      </ul>
+	      <a href="#"><strong><i class="glyphicon glyphicon-dashboard"></i> My Dashboard</strong></a>  
+			<div class="row">
+			<!-- center left-->	
+				<div class="col-md-6">
+					<div id="profile" class="">
+						<form role="form">
+							<p></br></br></p>
+							<div class="form-group">
+								<label for="showUsername">Chosen Username</label>
+								<input type="text" class="form-control" name="showUsername" id="showUsername" placeholder="Chosen Username" disabled>
+							</div>
+							<div class="form-group">
+								<label for="realName">Name</label>
+								<input type="text" class="form-control" name="realName" id="realName" placeholder="Enter your Name">
+							</div>
+							<div class="form-group">
+								<label for="showEmail">Email Address</label>
+								<input type="email" class="form-control" name="showEmail" id="showEmail" placeholder="Enter Email">
+							</div>
+							<div class="form-group">
+								<label for="industry">Select Primary Industry</label>
+								<select class="form-control">
+									<option class="form-control" name="industry1" value="industry1">Industry 1</option>
+									<option class="form-control" name="industry2" value="industry2">Industry 2</option>
+									<option class="form-control" name="industry3" value="industry3">Industry 3</option>
+									<option class="form-control" name="industry4" value="industry4">Industry 4</option>
+									<option class="form-control" name="industry5" value="industry5">Industry 5</option>
+									<option class="form-control" name="industry6" value="industry6">Industry 6</option>
+									<option class="form-control" name="industry7" value="industry7">Industry 7</option>
+									<option class="form-control" name="industry8" value="industry8">Industry 8</option>
+									<option class="form-control" name="industry9" value="industry9">Industry 9</option>
+									<option class="form-control" name="industry10" value="industry10">Industry 10</option>
+								</select>
+							</div>
+
+							<div class="form-group">
+								<label for="specTag">Areas of Specialization</label>
+								<input type="text" value="" data-role="tagsinput" class="form-control" name ="specTag" id="specTag" placeholder="Enter your fields of specialization here. These are interpreted as tags.">
+							</div>
+							
+							<div class="form-group">
+								<label for="experience">Past Experience</label>
+								<textarea class="form-control" rows="5" id="experience" placeholder="Write a brief excerpt of your past experience.">
+								</textarea>
+							</div>
+							
+							<div class="form-group">
+								<label for="oldPassword">Enter Old Password</label>
+								<input type="password" class="form-control" id="oldPassword" placeholder="Enter Old Password">
+							</div>
+							<div class="form-group">
+								<label for="newPassword">Enter New Password</label>
+								<input type="password" class="form-control" id="inputPassword" placeholder="Enter New Password">
+							</div>
+							<div class="form-group">
+								<label for="conFirmPassword">Confirm New Password</label>
+								<input type="password" class="form-control" id="confirmPassword" placeholder="Confirm New Password">
+							</div>
+							<button type="submit" class="btn btn-success" id="submitChanges">Submit Changes</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<!-- /Main -->
+
+	

@@ -16,7 +16,7 @@ class C_mainpage extends CI_Controller {
 	public function index(){
 		$this->load->view('templates/main_header');
 		$this->load->view('templates/main_sidebar');
-		$this->load->view('dashboard');
+		$this->load->view('newreg-mentor');
 		$this->load->view('templates/main_footer');
 	}
 
