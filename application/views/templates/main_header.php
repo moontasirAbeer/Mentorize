@@ -2,6 +2,11 @@
 if(!isset($_SESSION)){
  session_start();
 }
+if($_SESSION['logged_in'] != 1){
+	$url = site_url(pages); 
+	header("Location: $url");
+	die();
+}
 $_SESSION['date_time'] = date("Y-m-d h:i:sa");
 print_r($_SESSION);
 ?>

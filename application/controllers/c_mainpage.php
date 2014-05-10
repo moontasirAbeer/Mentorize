@@ -6,8 +6,8 @@ class C_mainpage extends CI_Controller {
 		parent::__construct();
 
 		$this->load->helper('form');
-		#$this->load->model('posts_model');
-		#$this->load->model('user_model');
+		$this->load->model('post_model');
+		$this->load->model('user_model');
 		$this->load->model('profile_model');
 		$this->load->library('session');
 		$this->load->helper('url');
