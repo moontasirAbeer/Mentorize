@@ -16,8 +16,18 @@ class User_model extends CI_Model{
 		'user_name' => $this->input->post('chooseUsername'),
 		'password' => $this->input->post('inputPassword'),
 		'email' => $this->input->post('inputEmail'),
-		'user_type' => 'TEST'
 		);
+		$mentor = $this->input->post('mentor');
+        $mentee = $this->input->post('mentee');
+        if($mentor == 'on'){
+        	$data['user_type'] = 'mentor';
+        }
+        else if($mentee == 'on'){
+        	$data['user_type'] = 'mentee';
+        }
+        else{
+        	$data['user_type'] = 'none';
+        }
 
 		# ID checking should be done in view js
 		# pass all usernames to view on page load

@@ -17,12 +17,11 @@ class C_pages extends CI_Controller {
 
 	public function login(){
 		$data = $this->input->post();
-		$session = $this->session->userdata();
 		print_r($data);
-		print_r($session);
 		# the above is for debugging. Remove.
 
 		$this->user_model->login();
+		
 	}
 
 	public function create(){
@@ -30,7 +29,27 @@ class C_pages extends CI_Controller {
 		print_r($data);
 		# the above is for debugging. Remove.
 
+		$newdata['username'] = $this->input->post('user-name');
+        $newdata['logged_in'] = TRUE;
+        
+        $mentor = $this->input->post('mentor');
+        $mentee = $this->input->post('mentee');
+        if($mentor == 'on'){
+        	$newdata['user_type'] = 'mentor';
+        }
+        else if($mentee == 'on'){
+        	$newdata['user_type'] = 'mentee';
+        }
+        else{
+        	$newdata['user_type'] = 'none';
+        }
+
+		$this->session->set_userdata($newdata);
 		$this->user_model->insert_user();
+
+		#DEBUG
+		$session = $this->session->userdata('user_type');
+		print_r($session);
 	}
 
 	public function post_test(){
