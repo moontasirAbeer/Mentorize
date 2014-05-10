@@ -7,20 +7,21 @@ class C_pages extends CI_Controller {
 		$this->load->helper('form');
 		# $this->load->library('form_validation');
 		$this->load->model('user_model');
-		$this->load->library('session');
+		#$this->load->library('session');
 		$this->load->helper('url');
+		session_start();
 	}
 
 	public function index(){
-		$newdata = base_url();
-		$this->session->set_userdata('base_url', $newdata);
+		#$newdata = base_url();
+		#$this->session->set_userdata('base_url', $newdata);
 
 		$data['existing_users'] = $this->user_model->get_users();
 		$this->load->view('frontpage', $data);
 	}
 
 	public function login(){
-		$data = $this->input->post();
+		#$data = $this->input->post();
 		#print_r($data);
 		# the above is for debugging. Remove.
 
@@ -30,16 +31,14 @@ class C_pages extends CI_Controller {
 		#echo"RETURNED FROM MODEL --> ";
 		#print_r($user_data);
 
-		# set user data in session
-		$newdata['user_name'] = $user_data[0]['user_name'];
-        $newdata['logged_in'] = TRUE;
-        $newdata['user_type'] = $user_data[0]['user_type'];
-        
-
-		$this->session->set_userdata($newdata);
+		
+        $_SESSION['logged_in'] = TRUE;
+        $_SESSION['user_type'] = $user_data[0]['user_type'];
+		$_SESSION['user_name'] = $user_data[0]['user_name'];
+		$_SESSION['date_time'] = date("Y-m-d h:i:sa");
 
 		# debug ------
-		$user_type = $this->session->userdata('user_type');
+		#$user_type = $this->session->userdata('user_type');
 		#echo "FROM SESSION --> ";
 		#print_r($user_type);
 
@@ -50,8 +49,8 @@ class C_pages extends CI_Controller {
 	}
 
 	public function create(){
-		$data = $this->input->post();
-		print_r($data);
+		#$data = $this->input->post();
+		#print_r($data);
 		# the above is for debugging. Remove.
 
 		$this->user_model->insert_user();

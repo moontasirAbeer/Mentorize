@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -9,7 +11,7 @@
 		<link rel="stylesheet" type="text/css" href="css/styles.css" />
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 		<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css" />
-		<link rel="stylesheet" type="text/css" href="<?php echo $this->session->userdata('base_url'); ?>css/splashscreen.css" />
+		<link rel="stylesheet" type="text/css" href="<?php echo base_url('css/splashscreen.css'); ?>" />
 		<script src="http://ajax.microsoft.com/ajax/jQuery/jquery-1.4.4.min.js"></script>
 		<script src="js/jquery-2.1.1.js"></script>
 		<script src="js/bootstrap.js"></script>
@@ -54,7 +56,7 @@
 
 				<div id="contentArea">
 					<div id="login" class="hidden">
-						<form role="form" action="http://localhost/Mentorize/index.php/c_pages/login" method="post" accept-charset="utf-8">
+						<?php echo form_open('c_pages/login') ?>
 							<div class="form-group">
 								<label class="sr-only" for="user-name">User Name</label>
 								<input type="text" class="form-control" name="user-name" id="user-name" placeholder="Enter User Name">
@@ -70,7 +72,7 @@
 						<!-- <form role="form"> -->
 						<!-- CI Form start -->
 						<?php echo validation_errors(); ?>
-						<form role="form" action="http://localhost/Mentorize/index.php/c_pages/create" method="post" accept-charset="utf-8">
+						<?php echo form_open('c_pages/create') ?>
 						<!-- CI Form end -->
 							<div class="form-group">
 								<label class="sr-only" for="chooseUsername">Choose a Username</label>

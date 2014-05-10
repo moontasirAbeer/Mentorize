@@ -8,9 +8,10 @@ class C_mainpage extends CI_Controller {
 		$this->load->helper('form');
 		#$this->load->model('posts_model');
 		#$this->load->model('user_model');
-		#$this->load->model('profile_model');
+		$this->load->model('profile_model');
 		$this->load->library('session');
 		$this->load->helper('url');
+		session_start();
 	}
 
 	public function index(){
@@ -21,7 +22,9 @@ class C_mainpage extends CI_Controller {
 	}
 
 	public function view_profile(){
-		$this->load->view('templates/main_header');
+		$data['profile'] =  $this->profile_model->get_profile();
+
+		$this->load->view('templates/main_header', $data);
 		$this->load->view('templates/main_sidebar');
 		$this->load->view('profile');
 		$this->load->view('templates/main_footer');
@@ -44,6 +47,10 @@ class C_mainpage extends CI_Controller {
 		$this->load->view('templates/main_sidebar');
 		$this->load->view('sendMessage');
 		$this->load->view('templates/main_footer');
+	}
+
+	public function create_profile(){
+		$this->profile_model->insert_profile();
 	}
 
 }

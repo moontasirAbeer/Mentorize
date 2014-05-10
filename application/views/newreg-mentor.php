@@ -10,16 +10,16 @@
 	         <li><a href="#"><i class="glyphicon glyphicon-user"></i></a></li>
 	         <li><a title="Add Widget" data-toggle="modal" href="#addWidgetModal"><span class="glyphicon glyphicon-plus-sign"></span> Add Widget</a></li>
 	      </ul>
-	      <a href="#"><strong><i class="glyphicon glyphicon-dashboard"></i> My Dashboard</strong></a>  
+	      <a href="#"><strong><i class="glyphicon glyphicon-dashboard"></i> Dashboard</strong></a>  
 			<div class="row">
 			<!-- center left-->	
 				<div class="col-md-6">
 					<div id="profile" class="">
-						<form role="form">
+						<?php echo form_open('c_mainpage/create_profile') ?>
 							<p></br></br></p>
 							<div class="form-group">
 								<label for="showUsername">Chosen Username</label>
-								<input type="text" class="form-control" name="showUsername" id="showUsername" placeholder="Chosen Username" disabled>
+								<input type="text" class="form-control" name="showUsername" id="showUsername" placeholder="<?php echo $_SESSION['user_name']; ?> " disabled>
 							</div>
 							<div class="form-group">
 								<label for="realName">Name</label>
@@ -29,9 +29,9 @@
 								<label for="showEmail">Email Address</label>
 								<input type="email" class="form-control" name="showEmail" id="showEmail" placeholder="Enter Email">
 							</div>
-							<div class="form-group">
+							<div class="form-group" >
 								<label for="industry">Select Primary Industry</label>
-								<select class="form-control">
+								<select class="form-control" id="industry" name="industry">
 									<option class="form-control" name="industry1" value="industry1">Industry 1</option>
 									<option class="form-control" name="industry2" value="industry2">Industry 2</option>
 									<option class="form-control" name="industry3" value="industry3">Industry 3</option>
@@ -52,7 +52,7 @@
 							
 							<div class="form-group">
 								<label for="experience">Past Experience</label>
-								<textarea class="form-control" rows="5" id="experience" placeholder="Write a brief excerpt of your past experience.">
+								<textarea class="form-control" rows="5" id="experience" name="experience" placeholder="Write a brief excerpt of your past experience.">
 								</textarea>
 							</div>
 							

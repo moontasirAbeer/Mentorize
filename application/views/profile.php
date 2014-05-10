@@ -8,7 +8,7 @@
 	         <li><a href="#"><i class="glyphicon glyphicon-user"></i></a></li>
 	         <li><a title="Add Widget" data-toggle="modal" href="#addWidgetModal"><span class="glyphicon glyphicon-plus-sign"></span> Add Widget</a></li>
 	      </ul>
-	      <a href="#"><strong><i class="glyphicon glyphicon-dashboard"></i> My Dashboard</strong></a>  
+	      <a href="#"><strong><i class="glyphicon glyphicon-dashboard"></i> Profile</strong></a>  
 			<div class="row">
 			<!-- center left-->	
 				<div class="col-md-6">
@@ -19,15 +19,11 @@
     	 <div class="well profile">
             <div class="col-sm-12">
                 <div class="col-xs-12 col-sm-8">
-                    <h2>Nicole Pearson</h2>
-                    <p><strong>About: </strong> Web Designer / UI. </p>
-                    <p><strong>Hobbies: </strong> Read, out with friends, listen to music, draw and learn new things. </p>
-                    <p><strong>Skills: </strong>
-                        <span class="tags">html5</span> 
-                        <span class="tags">css3</span>
-                        <span class="tags">jquery</span>
-                        <span class="tags">bootstrap3</span>
-                    </p>
+                    <h2><?php echo $profile['user_name']; ?></h2>
+                    <p><strong>Primary Industry: </strong> <?php echo $profile['industry_primary']; ?> </p>
+                    <p><strong>Hobbies: </strong> Hobbies go here. </p>
+                    <p><strong>Skills: </strong><?php echo $profile['specializations']; ?></p>
+                    <p><strong>Experience: </strong><?php echo $profile['experience']; ?></p>
                 </div>             
                 <div class="col-xs-12 col-sm-4 text-center">
                     <figure>
