@@ -41,6 +41,7 @@
 # $route['(:any)'] = "pages/page/$1"
 $route['default_controller'] = "c_pages";
 $route['404_override'] = '';
+$route['pages'] = "c_pages";
 $route['dashboard'] = "c_dashboard/index";
 # $route['dashboard/'] = "c_dashboard/index";
 $route['test'] = "c_test";

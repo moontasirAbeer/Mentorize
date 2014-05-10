@@ -11,8 +11,8 @@ class C_pages extends CI_Controller {
 	}
 
 	public function index(){
-		$data = $this->user_model->get_users();
-		$this->load->view('frontpage');
+		$data['existing_users'] = $this->user_model->get_users();
+		$this->load->view('frontpage', $data);
 	}
 
 	public function login(){
