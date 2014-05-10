@@ -14,9 +14,9 @@ class Post_model extends CI_Model{
 
 	public function insert_post(){
 		$data = array(
-		'user_name' => $_SESSION['user_name'],
+		'user_name' => "REPLACEME"  # $_SESSION['user_name'],
 		'title' => $this->input->post('title'),
-		'time' => $_SESSION['date_time'],
+		'time' => # $_SESSION['date_time'],
 		'tags' => "TO BE IMPLEMENTED",
 		'content' = $this->input->post('content')
 		);
