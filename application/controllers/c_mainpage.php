@@ -26,8 +26,8 @@ class C_mainpage extends CI_Controller {
 		$data['$name'] = $name;
 
 		$this->load->view('templates/main_header', $data);
-		$this->load->view('templates/main_sidebar');
-		$this->load->view('profile');
+		$this->load->view('templates/main_sidebar' $data);
+		$this->load->view('profile' $data);
 		$this->load->view('templates/main_footer');
 	}
 
