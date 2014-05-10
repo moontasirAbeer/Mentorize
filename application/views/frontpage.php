@@ -57,7 +57,7 @@
 						<form role="form" action="http://localhost/Mentorize/index.php/c_pages/login" method="post" accept-charset="utf-8">
 							<div class="form-group">
 								<label class="sr-only" for="user-name">User Name</label>
-								<input type="email" class="form-control" name="user-name" id="user-name" placeholder="Enter User Name">
+								<input type="text" class="form-control" name="user-name" id="user-name" placeholder="Enter User Name">
 							</div>
 							<div class="form-group">
 								<label class="sr-only" for="password">Password</label>
