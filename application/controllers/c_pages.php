@@ -23,7 +23,7 @@ class C_pages extends CI_Controller {
 		#$data = $this->input->post();
 		#print_r($data);
 		# the above is for debugging. Remove.
-		print_r($_SESSION);
+		
 		# check login credentials
 		$user_data = $this->user_model->login();
 		# debug ---------
@@ -35,7 +35,7 @@ class C_pages extends CI_Controller {
         $_SESSION['user_type'] = $user_data[0]['user_type'];
 		$_SESSION['user_name'] = $user_data[0]['user_name'];
 		$_SESSION['date_time'] = date("Y-m-d h:i:sa");
-
+		print_r($_SESSION);
 		# debug ------
 		#$user_type = $this->session->userdata('user_type');
 		#echo "FROM SESSION --> ";
