@@ -24,11 +24,14 @@ class C_mainpage extends CI_Controller {
 	public function view_profile($myname = "REPLACEME"){
 		$data['profile'] =  $this->profile_model->get_profile($myname);
 		$data['$myname'] = $myname;
+		print_r($data);
 
-		$this->load->view('templates/main_header', $data);
+
+		/*$this->load->view('templates/main_header', $data);
 		$this->load->view('templates/main_sidebar');
 		$this->load->view('profile');
 		$this->load->view('templates/main_footer');
+		*/
 	}
 
 	public function view_post(){
