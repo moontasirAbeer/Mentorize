@@ -8,7 +8,7 @@ class Profile_model extends CI_Model{
 	}
 
 	public function get_profile($myname){
-		 $queryString = "select * from users where user_name='" . $myname . "';";
+		 $queryString = "select * from user_profile where user_name = '" . $myname . "';";
 		$query = $this->db->query($queryString);
 		return $query->result_array(); 
 	}
