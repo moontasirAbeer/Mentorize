@@ -19,11 +19,11 @@
     	 <div class="well profile">
             <div class="col-sm-12">
                 <div class="col-xs-12 col-sm-8">
-                    <h2><?php echo $profile['user_name']; ?></h2>
-                    <p><strong>Primary Industry: </strong> <?php echo $profile['industry_primary']; ?> </p>
+                    <h2><?php echo $profile[0]['user_name']; ?></h2>
+                    <p><strong>Primary Industry: </strong> <?php echo $profile[0]['industry_primary']; ?> </p>
                     <p><strong>Hobbies: </strong> Hobbies go here. </p>
-                    <p><strong>Skills: </strong><?php echo $profile['specializations']; ?></p>
-                    <p><strong>Experience: </strong><?php echo $profile['experience']; ?></p>
+                    <p><strong>Skills: </strong><?php echo $profile[0]['specializations']; ?></p>
+                    <p><strong>Experience: </strong><?php echo $profile[0]['experience']; ?></p>
                 </div>             
                 <div class="col-xs-12 col-sm-4 text-center">
                     <figure>
