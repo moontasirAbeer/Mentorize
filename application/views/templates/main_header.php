@@ -36,7 +36,7 @@ print_r($_SESSION);
 	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 	          <span class="icon-toggle"></span>
 	      </button>
-	      <a class="navbar-brand" href="#"><?php echo "Hello, " . $_SESSION['user_name'] ."!"; ?></a>
+	      <a class="navbar-brand" href="#"><?php echo "Hello, USERNAME!"; ?></a>   <!--   . $_SESSION['user_name'] .   -->
 	    </div>
 	    <div class="navbar-collapse collapse">
 	      <ul class="nav navbar-nav navbar-right">
