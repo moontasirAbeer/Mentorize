@@ -16,7 +16,7 @@ class Profile_model extends CI_Model{
 	public function insert_profile(){
 		$data = array(
 		'user_name' => "REPLACEME" # $_SESSION['user_name'],
-		'industry_primary' => $this->input->post('industry'),
+		'industry_primary' => "INDUSTRY" # $this->input->post('industry'),
 		'specializations' => $this->input->post('specTag'),
 		'experience' => $this->input->post('experience'),
 		);
