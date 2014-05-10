@@ -51,6 +51,8 @@ class C_mainpage extends CI_Controller {
 
 	public function create_profile(){
 		$this->profile_model->insert_profile();
+		$page['action'] = 'Profile Creation';
+		$this->load->view('success', $page);
 	}
 
 }
