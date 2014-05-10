@@ -22,26 +22,26 @@ class C_pages extends CI_Controller {
 
 		# check login credentials
 		$user_data = $this->user_model->login();
+		# debug ---------
+		echo"RETURNED FROM MODEL --> ";
 		print_r($user_data);
 
 		# set user data in session
-		$newdata['username'] = $this->input->post('user-name');
+		$newdata['user_name'] = $user_data[0]['user_name'];
         $newdata['logged_in'] = TRUE;
+        $newdata['user_type'] = $user_data[0]['user_type'];
         
-        $mentor = $this->input->post('mentor');
-        $mentee = $this->input->post('mentee');
-        if($mentor == 'on'){
-        	$newdata['user_type'] = 'mentor';
-        }
-        else if($mentee == 'on'){
-        	$newdata['user_type'] = 'mentee';
-        }
-        else{
-        	$newdata['user_type'] = 'none';
-        }
 
 		$this->session->set_userdata($newdata);
 
+		# debug ------
+		$user_type = $this->session->userdata('user_type');
+		echo "FROM SESSION --> ";
+		print_r($user_type);
+
+		if($user_data != "false"){
+			# $this->load->view('pages/reroute');
+		}		
 	}
 
 	public function create(){
@@ -50,10 +50,6 @@ class C_pages extends CI_Controller {
 		# the above is for debugging. Remove.
 
 		$this->user_model->insert_user();
-
-		#DEBUG
-		$session = $this->session->userdata('user_type');
-		print_r($session);
 	}
 
 	public function post_test(){

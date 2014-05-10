@@ -45,6 +45,7 @@ $route['pages'] = "c_pages";
 $route['dashboard'] = "c_dashboard/index";
 # $route['dashboard/'] = "c_dashboard/index";
 $route['test'] = "c_test";
+# $route['pages/reroute'] = "c_dashboard";
 
 
 /* End of file routes.php */
