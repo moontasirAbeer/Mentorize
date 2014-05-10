@@ -21,6 +21,10 @@ $_SESSION['date_time'] = date("Y-m-d h:i:sa");
         <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="<?php echo base_url('css/dashboard.css'); ?>" />
 		<script src="js/menteeDash.js"></script>
+		<script type="text/javascript" src="https://cdn.goinstant.net/v1/platform.min.js"></script>
+		<script type="text/javascript" src="https://cdn.goinstant.net/widgets/chat/latest/chat.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.goinstant.net/widgets/chat/latest/chat.css" />
+	
         
         <!--[if lt IE 9]>
           <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -28,6 +32,31 @@ $_SESSION['date_time'] = date("Y-m-d h:i:sa");
     </head> 
 
     <body class="universal">
+	<script type="text/javascript">
+		// Connect URL
+		var url = 'https://goinstant.net/FinalizerYHZ/Mentorize';
+		// Connect to GoInstant
+		goinstant.connect(url, function(err, platformObj, roomObj) {
+  		if (err) {
+    		throw err;
+  		}
+  		// Create a new instance of the Chat widget
+  		var chat = new goinstant.widgets.Chat({
+    		room: roomObj
+  		});
+  		// Initialize the Chat widget
+  		chat.initialize(function(err) {
+    		if (err) {
+      		throw err;
+    		}
+   		 // Now it should render on the page
+  		});
+		chat.destroy(function(err) {
+  			// done
+		});
+	});
+	</script>
+
         
     <!-- Header -->
     <div id="top-nav" class="navbar navbar-inverse navbar-static-top">
