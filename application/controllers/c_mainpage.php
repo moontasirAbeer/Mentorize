@@ -8,7 +8,7 @@ class C_mainpage extends CI_Controller {
 		$this->load->helper('form');
 		# $this->load->model('post_model');
 		$this->load->model('user_model');
-		# $this->load->model('profile_model');
+		$this->load->model('profile_model');
 		$this->load->library('session');
 		$this->load->helper('url');
 		session_start();
