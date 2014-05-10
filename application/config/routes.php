@@ -42,7 +42,10 @@
 $route['default_controller'] = "c_pages";
 $route['404_override'] = '';
 $route['pages'] = "c_pages";
-$route['dashboard'] = "c_dashboard/index";
+$route['dashboard'] = "c_mainpage";
+$route['mainpage'] = "c_mainpage";
+$route['mainpage/write_post'] = "c_mainpage/write_post";
+$route['mainpage/view_profile'] = "c_mainpage/view_profile";
 # $route['dashboard/'] = "c_dashboard/index";
 $route['test'] = "c_test";
 # $route['pages/reroute'] = "c_dashboard";

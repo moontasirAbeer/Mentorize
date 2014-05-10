@@ -8,23 +8,27 @@ class C_pages extends CI_Controller {
 		# $this->load->library('form_validation');
 		$this->load->model('user_model');
 		$this->load->library('session');
+		$this->load->helper('url');
 	}
 
 	public function index(){
+		$newdata = base_url();
+		$this->session->set_userdata('base_url', $newdata);
+
 		$data['existing_users'] = $this->user_model->get_users();
 		$this->load->view('frontpage', $data);
 	}
 
 	public function login(){
 		$data = $this->input->post();
-		print_r($data);
+		#print_r($data);
 		# the above is for debugging. Remove.
 
 		# check login credentials
 		$user_data = $this->user_model->login();
 		# debug ---------
-		echo"RETURNED FROM MODEL --> ";
-		print_r($user_data);
+		#echo"RETURNED FROM MODEL --> ";
+		#print_r($user_data);
 
 		# set user data in session
 		$newdata['user_name'] = $user_data[0]['user_name'];
@@ -36,11 +40,12 @@ class C_pages extends CI_Controller {
 
 		# debug ------
 		$user_type = $this->session->userdata('user_type');
-		echo "FROM SESSION --> ";
-		print_r($user_type);
+		#echo "FROM SESSION --> ";
+		#print_r($user_type);
 
-		if($user_data != "false"){
-			# $this->load->view('pages/reroute');
+		 if($user_data != "false"){
+			$page['action'] = 'Log In';
+			$this->load->view('success', $page);
 		}		
 	}
 

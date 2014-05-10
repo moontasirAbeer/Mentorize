@@ -18,7 +18,7 @@
 				<div class="col-md-6">
 
 				</div>
-				<div class="well">Inbox Messages <span class="badge pull-right">3</span></div>              		
+				<div class="well">Inbox Messages <?php $user = $this->session->userdata('user_type'); echo $user; ?><span class="badge pull-right">3</span></div>              		
 				<hr>              
 				<!--tabs-->
 				<div class="container">
