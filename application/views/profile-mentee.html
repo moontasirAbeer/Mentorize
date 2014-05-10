@@ -2,12 +2,12 @@
 <html lang="en">
     <head>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
-        <title>Dashboard</title>
-        <meta name="generator" content="Dashboard" />
+        <title>Welcome! Please enter your information</title>
+        <meta name="generator" content="DashboardMentee" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
         <link href="css/dashboard.css" rel="stylesheet">
-		<script src="js/menteeDash.js"></script>
+        <link href="css/bootstrap-tagsinput.css" rel="stylesheet">
         
         <!--[if lt IE 9]>
           <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -23,13 +23,14 @@
 	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 	          <span class="icon-toggle"></span>
 	      </button>
-	      <a class="navbar-brand" href="#">Dashboard</a>
+	      <a class="navbar-brand" href="#">Personal Information</a>
 	    </div>
 	    <div class="navbar-collapse collapse">
 	      <ul class="nav navbar-nav navbar-right">
 	        
 	        <li class="dropdown">
-	          <a class="dropdown-toggle" role="button" data-toggle="dropdown" href="#"><i class="glyphicon glyphicon-user"></i> Admin <span class="caret"></span></a>
+	          <a class="dropdown-toggle" role="button" data-toggle="dropdown" href="#"><i class="glyphicon glyphicon-user"></i> 
+	          	<!--Name of user obtained from database--> <span class="caret"></span></a>
 	          <ul id="g-account-menu" class="dropdown-menu" role="menu">
 	            <li><a href="#">My Profile</a></li>
 	          </ul>
@@ -56,7 +57,7 @@
 	          </a>
 	            <ul class="list-unstyled collapse in" id="userMenu">
 	                <li class="active"> <a href="#"><i class="glyphicon glyphicon-home"></i> Home</a></li>
-	                <li><a href="#"><i class="glyphicon glyphicon-envelope"></i> Messages <span class="badge badge-info">4</span></a></li>
+	                <li><a href="#"><i class="glyphicon glyphicon-envelope"></i> Messages</a></li>
 	                <li><a href="#"><i class="glyphicon glyphicon-cog"></i> Options</a></li>
 	                <li><a href="#"><i class="glyphicon glyphicon-comment"></i> Shoutbox</a></li>
 	                <li><a href="#"><i class="glyphicon glyphicon-off"></i> Logout</a></li>
@@ -82,7 +83,6 @@
 	      <a href="#"><strong><i class="glyphicon glyphicon-link"></i> Resources</strong></a>  
 	      
 	      <hr>
-
 	  	</div><!-- /col-3 -->
 	    <div class="col-md-9">
 	      	
@@ -94,61 +94,43 @@
 	         <li><a title="Add Widget" data-toggle="modal" href="#addWidgetModal"><span class="glyphicon glyphicon-plus-sign"></span> Add Widget</a></li>
 	      </ul>
 	      <a href="#"><strong><i class="glyphicon glyphicon-dashboard"></i> My Dashboard</strong></a>  
-	      
-	      	<hr>
-	      
 			<div class="row">
 			<!-- center left-->	
 				<div class="col-md-6">
-
-				</div>
-				<div class="well">Inbox Messages <span class="badge pull-right">3</span></div>              		
-				<hr>              
-				<!--tabs-->
-				<div class="container">
-					<div class="col-md-4">
-						<ul class="nav nav-tabs" id="myTab">
-							<li><a href="#profile" data-toggle="tab" onclick="showProfile()">Profile</a></li>
-							<li><a href="#messages" data-toggle="tab" onclick="showMessages()">Messages</a></li>
-							<li><a href="#settings" data-toggle="tab" onclick="showSettings()">Settings</a></li>
-						</ul>
-					</div> 
-					<!-- New item 5/7/2014 -->
-					<div id="profile" class="hidden">
+					<div id="profile" class="">
 						<form role="form">
 							<p></br></br></p>
 							<div class="form-group">
 								<label for="showUsername">Chosen Username</label>
-								<input type="text" class="form-control" id="showUsername" placeholder="Chosen Username" disabled>
+								<input type="text" class="form-control" name="showUsername" id="showUsername" placeholder="Chosen Username" disabled>
 							</div>
 							<div class="form-group">
 								<label for="realName">Name</label>
-								<input type="text" class="form-control" id="realName" placeholder="Enter your Name">
+								<input type="text" class="form-control" name="realName" id="realName" placeholder="Enter your Name">
 							</div>
 							<div class="form-group">
 								<label for="showEmail">Email Address</label>
-								<input type="email" class="form-control" id="showEmail" placeholder="Enter Email">
+								<input type="email" class="form-control" name="showEmail" id="showEmail" placeholder="Enter Email">
 							</div>
-							
-							<!-- New Dropdown-->
-							<div class="btn-group">
-								<label for="industry">Industry Selection</label>
-								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-									Choose Your Industry<span class="caret"></span>
-								</button>
-								<ul class="dropdown-menu" role="menu">
-									<li><a href="#">Computing Science</a></li>
-									<li><a href="#">Construction</a></li>
-									<li><a href="#">Management</a></li>
-									<li><a href="#">Education</a></li>
-									<li><a href="#">Vehicular Repair</a></li>
-								</ul>
+							<div class="form-group">
+								<label for="industry">Select Primary Industry</label>
+								<select class="form-control">
+									<option class="form-control" name="industry1" value="industry1">Industry 1</option>
+									<option class="form-control" name="industry2" value="industry2">Industry 2</option>
+									<option class="form-control" name="industry3" value="industry3">Industry 3</option>
+									<option class="form-control" name="industry4" value="industry4">Industry 4</option>
+									<option class="form-control" name="industry5" value="industry5">Industry 5</option>
+									<option class="form-control" name="industry6" value="industry6">Industry 6</option>
+									<option class="form-control" name="industry7" value="industry7">Industry 7</option>
+									<option class="form-control" name="industry8" value="industry8">Industry 8</option>
+									<option class="form-control" name="industry9" value="industry9">Industry 9</option>
+									<option class="form-control" name="industry10" value="industry10">Industry 10</option>
+								</select>
 							</div>
-							<!-- End New Dropdown-->
 
 							<div class="form-group">
 								<label for="specTag">Areas of Specialization</label>
-								<input type="text" data-role="tagsinput" class="form-control" id="specTag" placeholder="Enter your fields of specialization here. These are interpreted as tags.">
+								<input type="text" value="" data-role="tagsinput" class="form-control" id="specTag" placeholder="Enter your fields of specialization here. These are interpreted as tags.">
 							</div>
 							
 							<div class="form-group">
@@ -172,29 +154,6 @@
 							<button type="submit" class="btn btn-success" id="submitChanges">Submit Changes</button>
 						</form>
 					</div>
-					
-					<div id="messages" class="hidden">
-						<form role="form">
-							<div class="form-group">
-								<label class="sr-only" for="testing">Testing</label>
-								<input type="text" class="form-control" id="testing" placeholder="Just testing...">
-							</div>
-							
-							<button type="submit" class="btn btn-success" id="testButton">Le Test Button</button>
-						</form>
-					</div>
-					
-					<div id="settings" class="hidden">
-						<form role="form">
-							<div class="form-group">
-								<label class="sr-only" for="testing2">Testing</label>
-								<input type="text" class="form-control" id="testing2" placeholder="Just testing part 2...">
-							</div>
-							
-							<button type="submit" class="btn btn-success" id="testButton2">Le Test Button Deux</button>
-						</form>
-					</div>
-					<!-- End new item-->
 				</div>
 			</div>
 		</div>
@@ -227,9 +186,8 @@
 	  
 	        
 	        <script type='text/javascript' src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
-
 	        <script type='text/javascript' src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+	        <script type='text/javascript' src="bootstrap-tagsinput.min.js"></script>
 
 
 	        <!-- JavaScript jQuery code from Bootply.com editor -->
@@ -245,23 +203,10 @@
 	  	// toggle icon
 	  	$(this).find("i").toggleClass("glyphicon-chevron-right glyphicon-chevron-down");
 	});
-				
-				
-				$('#myTab a').click(function (e) {
-					e.preventDefault()
-					$(this).tab('show')
-				})
-				
-				$(function () {
-					$('#myTab a:last').tab('show')
-				})
-
+	        
+	        });
 	        
 	        </script>
-			
-			
-			
-		
 	        
     </body>
 </html>

@@ -54,7 +54,7 @@
 
 				<div id="contentArea">
 					<div id="login" class="hidden">
-						<form role="form">
+						<form role="form" action="http://localhost/Mentorize/index.php/pages/login" method="post" accept-charset="utf-8">
 							<div class="form-group">
 								<label class="sr-only" for="logInputEmail">Email Address</label>
 								<input type="email" class="form-control" name="logInputEmail" id="logInputEmail" placeholder="Enter Email">
@@ -91,6 +91,12 @@
 							<div class="form-group">
 								<label class="sr-only" for="conFirmPassword">Confirm Password</label>
 								<input type="password" class="form-control" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password">
+							</div>
+							<div class="form-group">
+								<img id="captcha" src="secureimage/secureimage_show.php" alt="CAPTCHA Image" />
+								<input type="text" name="captcha_code" size="10" maxlength="6" />
+								<a href="#" onclick="document.getElementById('captcha').src = 'secureimage/secureimage_show.php?' 
+									+ Math.random(); return false">[ Different Image ]</a>
 							</div>
 							<!-- New Dropdown-->
 							<div class="btn-group" data-toggle="buttons">

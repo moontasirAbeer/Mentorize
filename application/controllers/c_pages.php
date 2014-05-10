@@ -14,8 +14,11 @@ class C_pages extends CI_Controller {
 	}
 
 	public function login(){
-		# add later
-		# also add 'user_model' method for this
+		$data = $this->input->post();
+		print_r($data);
+		# the above is for debugging. Remove.
+
+		$this->user_model->login();
 	}
 
 	public function create(){
