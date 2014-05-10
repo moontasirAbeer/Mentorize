@@ -6,7 +6,7 @@ if($status  == 'PHP_SESSION_NONE') {
 } 
 */
 error_reporting(E_WARNING);
-session_destroy();
+@session_destroy();
 session_start();
 ?>
 
