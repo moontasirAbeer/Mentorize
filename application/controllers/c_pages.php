@@ -7,15 +7,19 @@ class C_pages extends CI_Controller {
 		$this->load->helper('form');
 		# $this->load->library('form_validation');
 		$this->load->model('user_model');
+		$this->load->library('session');
 	}
 
 	public function index(){
+		$data = $this->user_model->get_users();
 		$this->load->view('frontpage');
 	}
 
 	public function login(){
 		$data = $this->input->post();
+		$session = $this->session->userdata();
 		print_r($data);
+		print_r($session);
 		# the above is for debugging. Remove.
 
 		$this->user_model->login();
@@ -44,6 +48,11 @@ class C_pages extends CI_Controller {
 		$data['testvar'] = "Aye Carumba! :O";
 		$data['users'] = $this->user_model->get_users();
 		$this->load->view('testdata', $data);
+	}
+
+	public function profile(){
+		
+		$this->load->view('profile.html');
 	}
 }
 

@@ -54,7 +54,7 @@
 
 				<div id="contentArea">
 					<div id="login" class="hidden">
-						<form role="form" action="http://localhost/Mentorize/index.php/pages/login" method="post" accept-charset="utf-8">
+						<form role="form" action="http://localhost/Mentorize/index.php/c_pages/login" method="post" accept-charset="utf-8">
 							<div class="form-group">
 								<label class="sr-only" for="logInputEmail">Email Address</label>
 								<input type="email" class="form-control" name="logInputEmail" id="logInputEmail" placeholder="Enter Email">
@@ -70,7 +70,7 @@
 						<!-- <form role="form"> -->
 						<!-- CI Form start -->
 						<?php echo validation_errors(); ?>
-						<form role="form" action="http://localhost/Mentorize/index.php/pages/create" method="post" accept-charset="utf-8">
+						<form role="form" action="http://localhost/Mentorize/index.php/c_pages/create" method="post" accept-charset="utf-8">
 						<!-- CI Form end -->
 							<div class="form-group">
 								<label class="sr-only" for="chooseUsername">Choose a Username</label>
