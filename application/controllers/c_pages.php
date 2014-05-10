@@ -40,6 +40,7 @@ class C_pages extends CI_Controller {
 		#$user_type = $this->session->userdata('user_type');
 		#echo "FROM SESSION --> ";
 		#print_r($user_type);
+		print_r($_SESSION);
 
 		 if($user_data != "false"){
 			$page['action'] = 'Log In';
