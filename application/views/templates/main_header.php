@@ -9,6 +9,7 @@ if(!isset($_SESSION)){
 } */
 $_SESSION['date_time'] = date("Y-m-d h:i:sa");
 print_r($_SESSION);
+echo phpinfo();
 ?>
 
 <!DOCTYPE html>
