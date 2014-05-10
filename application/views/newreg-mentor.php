@@ -19,7 +19,7 @@
 							<p></br></br></p>
 							<div class="form-group">
 								<label for="showUsername">Chosen Username</label>
-								<input type="text" class="form-control" name="showUsername" id="showUsername" placeholder="<?php echo $_SESSION['user_name']; ?> " disabled>
+								<input type="text" class="form-control" name="showUsername" id="showUsername" placeholder="Username" disabled>
 							</div>
 							<div class="form-group">
 								<label for="realName">Name</label>

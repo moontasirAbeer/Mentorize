@@ -8,7 +8,7 @@ if(!isset($_SESSION)){
 	die();
 } */
 $_SESSION['date_time'] = date("Y-m-d h:i:sa");
-print_r($_SESSION);
+//print_r($_SESSION);
 ?>
 
 <!DOCTYPE html>
