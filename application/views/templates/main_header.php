@@ -1,4 +1,7 @@
 <?php
+if(!isset($_SESSION)){
+ session_start();
+}
 $_SESSION['date_time'] = date("Y-m-d h:i:sa");
 ?>
 
